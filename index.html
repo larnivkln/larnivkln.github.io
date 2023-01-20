@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Lauren Ivena Kolen">
+<meta name="dcterms.date" content="2023-01-19">
+
+<title>Melihat hubungan ekspor dan nilai tukar</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Melihat hubungan ekspor dan nilai tukar</h1>
+<p class="subtitle lead">ANALISIS NILAI FOB EKSPOR KOPI INDONESIA TERHADAP AMERIKA TAHUN 2012-2021</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Lauren Ivena Kolen </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 19, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><img src="poltekapp.jpg" class="img-fluid"></p>
+<section id="pendahuluan" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="pendahuluan"><span class="header-section-number">1</span> Pendahuluan</h2>
+<section id="latar-belakang" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="latar-belakang"><span class="header-section-number">1.1</span> Latar belakang</h3>
+<p>Perdagangan internasional merupakan kegiatan transaksi jual beli antar negara lain terkait transaksi barang dan/jasa dengan luas lingkup yang luas. Pedagangan internasional meliputi kegiatan impor dan ekspor, singkatnya impor adalah kegiatan membeli dan memasukan barang dari luar negeri masuk ke dalam Indonesia. Sedangkan ekspor, yaitu menjual dan mengeluarkan barang dari dalam negeri ke luar Indonesia. Dalam perdagangan internasional, ekspor sangat membantu di dalam negara itu tersebut dikarenakan ketika ekspor lebih besar dari pada impor maka akan mendapatkan uang karena surplus perdagangan. Berbagai banyak macam produk unggulan Indonesia yang di ekspor ke luar negeri dengan jumlah yang tidak sedikit, ekspor tersebut meliputi ekspor migas dan nonmigas. Ekspor migas terdiri dari minyak dan gas, yaitu industri pengolahan minyak, pengadaan gas dan pertambangan minyak dan gas, sedangkan nonmigas meliputi berbagai kategori, yaitu industry pengolahan, pertanian dan pertambangan. Pada sektor pertanian terdapat subsektor perkebunan yang memiliki peranan penting, karena memiliki kontribusi yang dominan terhadap nilai ekspor. Di dalam subsektor perkebunan, Indonesia banyak mengekspor komoditi-komoditi unggulannya salah satunya kopi. Kopi merupakan minuman dari olahan biji kopi yang menjadi bubuk dengan biji kopi yang telah disangrai dan dihaluskan. Setiap jenis kopi memiliki aroma dan cita rasa yang khas. Kopi banyak digemari oleh berbagai kalangan baik muda sampai lanjut usia. Kopi sudah ada sejak dahulu dan banyak digemari sampai saat ini Hal tersebut membuat kopi di Indonesia memiliki kontribusi, antara lain para pelaku usaha mebuka gerai kopi hal tersebut menjadi peluang untuk membuka lapangan kerja, pendapatan bagi petani, penghasil bahan baku industry serta kopi di Indonesia memiliki peranan penting dalam perekonomian nasional salah satunya menambah devisa negara melalui ekspor kopi. Kegiatan ekspor kopi menjadikan Indonesia sebagai salah satu negara dengan penghasil ekspor kopi terbanyak di dunia. Ekspor kopi di Indonesia memberikan dampak yang positif terhadap PDRB di sektor perkebunan di Indonesia. Pangsa pasar ekspor kopi terbesar Indonesia adalah Amerika Serikat.</p>
+</section>
+<section id="ruang-lingkup" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="ruang-lingkup"><span class="header-section-number">1.2</span> Ruang lingkup</h3>
+<p>Penelitian ini membahas mengenai pengaruh nilai tukar terhadap ekspor komoditi kopi Indonesia, faktor – faktor yang mempengaruhi hubungan nilai tukar dan memfokuskan pembahasaan terhadap nilai FOB ekspor kopi Indonesia ke negara Amerika. Data-data yang diambil merupakan data-data yang berkaitan dengan nilai ekspor kopi Indonesia ke negara Amerika</p>
+</section>
+<section id="rumusan-masalah" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="rumusan-masalah"><span class="header-section-number">1.3</span> Rumusan masalah</h3>
+<p>Berdasarkan uraian latar belakang masalah yang telah dikemukakan di atas, maka rumusan masalah sebagai berikut: 1. Apakah nilai tukar rupiah berpengaruh terhadap nilai ekspor kopi ke negara Amerika Serikat pada tahun 2012 s.d 2021?</p>
+</section>
+<section id="tujuan-dan-manfaat-penelitian" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="tujuan-dan-manfaat-penelitian"><span class="header-section-number">1.4</span> Tujuan dan manfaat penelitian</h3>
+<p>A. Tujuan Penelitian 1. Untuk mengetahui dan menganalisis seberapa besar pengaruh ekspor komoditi kopi Indonesia terhadap nilai tukar pada tahun 2012-2021 B. Manfaat Penelitian 1. Diharapkan pada hasil penelitian ini dalam upaya meningkatkan ekspor kopi Indonesia dengan melihat peluang di berbagai negara. 2. Bagi peneliti berikutnya, dapat dijadikan sebagai referensi penelitian yang berhubungan dengan ekspor kopi Indonesia. 3. Penelitian ini dapat dijadikan bahan pertimbangan pada komoditas ekspor kopi Indonesia. 4. Diharapkan dengan adanya penelitian ini bisa menambah wawasan dan pengetahuan terhadap komoditas kopi Indonesia.</p>
+</section>
+</section>
+<section id="studi-pustaka" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="studi-pustaka"><span class="header-section-number">2</span> Studi pustaka</h2>
+<p>Pedagangan internasional meliputi kegiatan impor dan ekspor. Kegiatan ekspor impor adalah kegiatan dengan dilakukannya transaksi terhadap negara lain dengan tujuan memenuhi kebutuhannya. Kegiatan ekspor mempengaruhi perekonomian nasional dengan adanya kegiatan ekspor dapat meningkatkan Gross Domestik Produk (GDP) negara itu manfaat lain yang di dapat dengan melakukannya ekspor adalah memperbaiki nilai tukar mata uang/kurs.</p>
+</section>
+<section id="metode-penelitian" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="metode-penelitian"><span class="header-section-number">3</span> Metode penelitian</h2>
+<section id="data" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="data"><span class="header-section-number">3.1</span> Data</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Tahun</th>
+<th>Amerika Serikat</th>
+<th>Indonesia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2012</td>
+<td>3308147000</td>
+<td>49726080815800</td>
+</tr>
+<tr class="even">
+<td>2013</td>
+<td>2070376000</td>
+<td>1120649806400</td>
+</tr>
+<tr class="odd">
+<td>2014</td>
+<td>2959031000</td>
+<td>44478378573400</td>
+</tr>
+<tr class="even">
+<td>2015</td>
+<td>2810791000</td>
+<td>42250123837400</td>
+</tr>
+<tr class="odd">
+<td>2016</td>
+<td>2698956000</td>
+<td>405690872184000</td>
+</tr>
+<tr class="even">
+<td>2017</td>
+<td>2563514000</td>
+<td>38533204339600</td>
+</tr>
+<tr class="odd">
+<td>2018</td>
+<td>2540307000</td>
+<td>38184370639800</td>
+</tr>
+<tr class="even">
+<td>2019</td>
+<td>2538301000</td>
+<td>38154217651400</td>
+</tr>
+<tr class="odd">
+<td>2020</td>
+<td>2023520000</td>
+<td>3041633852800</td>
+</tr>
+<tr class="even">
+<td>2021</td>
+<td>1947691000</td>
+<td>29276522497400</td>
+</tr>
+</tbody>
+</table>
+<p>Data yang digunakan dalam analisis ini adalah data ekspor kopi. Data yang digunakan berasal dari Badan Pusat Nasional, website di internet, artikel dan literatur-literatur yang relevan dalam penelitian ini.</p>
+</section>
+<section id="metode-analisis" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="metode-analisis"><span class="header-section-number">3.2</span> Metode analisis</h3>
+<p>Metode yang digunakan dalam penelitian ini dengan teknik kuantitatif. Data yang digunakan adalah data sekunder dengan periode 2012-2021 yaitu nilai ekspor kopi dengan perhitungan nilai tukar rupiah dan dollar Amerika. Analisis yang digunakan adalah analisis regresi linear berganda. Model regresi digambarkan sebagai berikut: Yi=β0+β1Xi+μi Dimana: Yi adalah nilai tukar USD terhadap mata uang negara lain; β0 adalah koefisien konstanta; β1 adalah parameter; Xi adalah nilai ekspor dan μi adalah error term.)</p>
+</section>
+</section>
+<section id="pembahasan" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="pembahasan"><span class="header-section-number">4</span> Pembahasan</h2>
+<section id="pembahasan-masalah" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="pembahasan-masalah"><span class="header-section-number">4.1</span> Pembahasan masalah</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Tahun</th>
+<th>X(Amerika Serikat)</th>
+<th>Y(Indonesia)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2012</td>
+<td>3308147000</td>
+<td>49726080815800</td>
+</tr>
+<tr class="even">
+<td>2013</td>
+<td>2070376000</td>
+<td>1120649806400</td>
+</tr>
+<tr class="odd">
+<td>2014</td>
+<td>2959031000</td>
+<td>44478378573400</td>
+</tr>
+<tr class="even">
+<td>2015</td>
+<td>2810791000</td>
+<td>42250123837400</td>
+</tr>
+<tr class="odd">
+<td>2016</td>
+<td>2698956000</td>
+<td>405690872184000</td>
+</tr>
+<tr class="even">
+<td>2017</td>
+<td>2563514000</td>
+<td>38533204339600</td>
+</tr>
+<tr class="odd">
+<td>2018</td>
+<td>2540307000</td>
+<td>38184370639800</td>
+</tr>
+<tr class="even">
+<td>2019</td>
+<td>2538301000</td>
+<td>38154217651400</td>
+</tr>
+<tr class="odd">
+<td>2020</td>
+<td>2023520000</td>
+<td>3041633852800</td>
+</tr>
+<tr class="even">
+<td>2021</td>
+<td>1947691000</td>
+<td>29276522497400</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="analisis-masalah" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="analisis-masalah"><span class="header-section-number">4.2</span> Analisis masalah</h3>
+<p>Hasil regresinya adalah</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>dat<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"regresii data.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>reg<span class="ot">&lt;-</span><span class="fu">lm</span>(Y<span class="sc">~</span>X,<span class="at">data=</span>dat)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(reg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Y ~ X, data = dat)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-6.855e+13 -4.222e+13 -3.194e+13 -3.041e+13  3.268e+14 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept) -9.544e+13  2.434e+14  -0.392    0.705
+X            6.460e+04  9.437e+04   0.685    0.513
+
+Residual standard error: 1.231e+14 on 8 degrees of freedom
+Multiple R-squared:  0.05534,   Adjusted R-squared:  -0.06275 
+F-statistic: 0.4686 on 1 and 8 DF,  p-value: 0.513</code></pre>
+</div>
+</div>
+<p>berdasarkan output di atas, model regresinya bisa dilihat dari bagian estimate, yaitu y = 2.487e+09 + 8.565e-07. dari uji parsial dengan t-value sebesar 0.685 dan p-value&lt; 2.2e-16 dimana tingkat signifikansi yang digunakan adalah 0.513, memberikan hasil tolak H0: β1=0 artinya variabel X (Nilai tukar uang Amerika Serikat) secara signifikan berpengaruh terhadap model. Nilai koefisien regresi dari X sebesar 1.225e+01 dapat kita interpretasikan bahwa setiap kenaikan nilai tukar uang X (nilai tukar uang Amerika Serikat), maka nilai Y (nilai tukar uang indonesia) akan naik sebesar 8.565e-07</p>
+</section>
+</section>
+<section id="kesimpulan" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="kesimpulan"><span class="header-section-number">5</span> Kesimpulan</h2>
+<p>Menyadari besarnya potensi yang dimiliki, maka Pemerintah Indonesia mengambil langkah untuk menerapkan kebijakan peningkatan daya saing produk kopi Indonesia di pasar global dan kesimpulan dari penelitian mengenai volume ekspor kopi Indonesia ke Amerika Serikat adalah Variabel Kurs Rupiah mempunyai hubungan positif dan berpengaruh tidak signifikan terhadap volume ekspor kopi Indonesia pasar internasional.</p>
+</section>
+<section id="referensi" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="referensi"><span class="header-section-number">6</span> Referensi</h2>
+<p>Nurfitri, Ade Rachmawati, dkk. 2019. ANALISIS KUALITATIF TERHADAP PERKEMBANGAN NILAI EKSPOR INDONESIA (FOB) PERIODE SEPTEMBER 2017-SEPTEMBER 2019. JURNAL VOL.13 NO.11</p>
+<p>Putranto, Hendri, Suwali. 2022. Analisis Faktor-Faktor Yang Mempengaruhi Ekspor Kopike Amerika Serikat. PJEB: PERWIRA JOURNAL OF ECONOMY &amp; BUSINESSE-ISSN: 2775-572XVolume 02 No 02</p>
+<p>Hidayah, Nurul Eka. 2017. Analisis Ekspor Kopi Indonesia ke Amerika Serikat dengan Error Correction Model (ECM) Tahun 1990-2014.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,102 @@
+---
+title: "Melihat hubungan ekspor dan nilai tukar"
+subtitle: "ANALISIS NILAI FOB EKSPOR KOPI INDONESIA TERHADAP AMERIKA TAHUN 2012-2021"
+author: "Lauren Ivena Kolen"
+date: 2023-01-19
+number-sections: true
+format:
+  html: default
+  docx: default
+editor: visual
+---
+
+![](poltekapp.jpg)
+
+## Pendahuluan
+
+### Latar belakang
+
+Perdagangan internasional merupakan kegiatan transaksi jual beli antar negara lain terkait transaksi barang dan/jasa dengan luas lingkup yang luas. Pedagangan internasional meliputi kegiatan impor dan ekspor, singkatnya impor adalah kegiatan membeli dan memasukan barang dari luar negeri masuk ke dalam Indonesia. Sedangkan ekspor, yaitu menjual dan mengeluarkan barang dari dalam negeri ke luar Indonesia. Dalam perdagangan internasional, ekspor sangat membantu di dalam negara itu tersebut dikarenakan ketika ekspor lebih besar dari pada impor maka akan mendapatkan uang karena surplus perdagangan. Berbagai banyak macam produk unggulan Indonesia yang di ekspor ke luar negeri dengan jumlah yang tidak sedikit, ekspor tersebut meliputi ekspor migas dan nonmigas. Ekspor migas terdiri dari minyak dan gas, yaitu industri pengolahan minyak, pengadaan gas dan pertambangan minyak dan gas, sedangkan nonmigas meliputi berbagai kategori, yaitu industry pengolahan, pertanian dan pertambangan. Pada sektor pertanian terdapat subsektor perkebunan yang memiliki peranan penting, karena memiliki kontribusi yang dominan terhadap nilai ekspor. Di dalam subsektor perkebunan, Indonesia banyak mengekspor komoditi-komoditi unggulannya salah satunya kopi. Kopi merupakan minuman dari olahan biji kopi yang menjadi bubuk dengan biji kopi yang telah disangrai dan dihaluskan. Setiap jenis kopi memiliki aroma dan cita rasa yang khas. Kopi banyak digemari oleh berbagai kalangan baik muda sampai lanjut usia. Kopi sudah ada sejak dahulu dan banyak digemari sampai saat ini Hal tersebut membuat kopi di Indonesia memiliki kontribusi, antara lain para pelaku usaha mebuka gerai kopi hal tersebut menjadi peluang untuk membuka lapangan kerja, pendapatan bagi petani, penghasil bahan baku industry serta kopi di Indonesia memiliki peranan penting dalam perekonomian nasional salah satunya menambah devisa negara melalui ekspor kopi. Kegiatan ekspor kopi menjadikan Indonesia sebagai salah satu negara dengan penghasil ekspor kopi terbanyak di dunia. Ekspor kopi di Indonesia memberikan dampak yang positif terhadap PDRB di sektor perkebunan di Indonesia. Pangsa pasar ekspor kopi terbesar Indonesia adalah Amerika Serikat.
+
+### Ruang lingkup
+
+Penelitian ini membahas mengenai pengaruh nilai tukar terhadap ekspor komoditi kopi Indonesia, faktor -- faktor yang mempengaruhi hubungan nilai tukar dan memfokuskan pembahasaan terhadap nilai FOB ekspor kopi Indonesia ke negara Amerika. Data-data yang diambil merupakan data-data yang berkaitan dengan nilai ekspor kopi Indonesia ke negara Amerika
+
+### Rumusan masalah
+
+Berdasarkan uraian latar belakang masalah yang telah dikemukakan di atas, maka rumusan masalah sebagai berikut: 1. Apakah nilai tukar rupiah berpengaruh terhadap nilai ekspor kopi ke negara Amerika Serikat pada tahun 2012 s.d 2021?
+
+### Tujuan dan manfaat penelitian
+
+A. Tujuan Penelitian 1. Untuk mengetahui dan menganalisis seberapa besar pengaruh ekspor komoditi kopi Indonesia terhadap nilai tukar pada tahun 2012-2021 B. Manfaat Penelitian 1. Diharapkan pada hasil penelitian ini dalam upaya meningkatkan ekspor kopi Indonesia dengan melihat peluang di berbagai negara. 2. Bagi peneliti berikutnya, dapat dijadikan sebagai referensi penelitian yang berhubungan dengan ekspor kopi Indonesia. 3. Penelitian ini dapat dijadikan bahan pertimbangan pada komoditas ekspor kopi Indonesia. 4. Diharapkan dengan adanya penelitian ini bisa menambah wawasan dan pengetahuan terhadap komoditas kopi Indonesia.
+
+## Studi pustaka
+
+Pedagangan internasional meliputi kegiatan impor dan ekspor. Kegiatan ekspor impor adalah kegiatan dengan dilakukannya transaksi terhadap negara lain dengan tujuan memenuhi kebutuhannya. Kegiatan ekspor mempengaruhi perekonomian nasional dengan adanya kegiatan ekspor dapat meningkatkan Gross Domestik Produk (GDP) negara itu manfaat lain yang di dapat dengan melakukannya ekspor adalah memperbaiki nilai tukar mata uang/kurs.
+
+## Metode penelitian
+
+### Data
+
+| Tahun | Amerika Serikat | Indonesia       |
+|-------|-----------------|-----------------|
+| 2012  | 3308147000      | 49726080815800  |
+| 2013  | 2070376000      | 1120649806400   |
+| 2014  | 2959031000      | 44478378573400  |
+| 2015  | 2810791000      | 42250123837400  |
+| 2016  | 2698956000      | 405690872184000 |
+| 2017  | 2563514000      | 38533204339600  |
+| 2018  | 2540307000      | 38184370639800  |
+| 2019  | 2538301000      | 38154217651400  |
+| 2020  | 2023520000      | 3041633852800   |
+| 2021  | 1947691000      | 29276522497400  |
+
+Data yang digunakan dalam analisis ini adalah data ekspor kopi. Data yang digunakan berasal dari Badan Pusat Nasional, website di internet, artikel dan literatur-literatur yang relevan dalam penelitian ini.
+
+### Metode analisis
+
+Metode yang digunakan dalam penelitian ini dengan teknik kuantitatif. Data yang digunakan adalah data sekunder dengan periode 2012-2021 yaitu nilai ekspor kopi dengan perhitungan nilai tukar rupiah dan dollar Amerika. Analisis yang digunakan adalah analisis regresi linear berganda. Model regresi digambarkan sebagai berikut: Yi=β0+β1Xi+μi Dimana: Yi adalah nilai tukar USD terhadap mata uang negara lain; β0 adalah koefisien konstanta; β1 adalah parameter; Xi adalah nilai ekspor dan μi adalah error term.)
+
+## Pembahasan
+
+### Pembahasan masalah
+
+| Tahun | X(Amerika Serikat) | Y(Indonesia)    |
+|-------|--------------------|-----------------|
+| 2012  | 3308147000         | 49726080815800  |
+| 2013  | 2070376000         | 1120649806400   |
+| 2014  | 2959031000         | 44478378573400  |
+| 2015  | 2810791000         | 42250123837400  |
+| 2016  | 2698956000         | 405690872184000 |
+| 2017  | 2563514000         | 38533204339600  |
+| 2018  | 2540307000         | 38184370639800  |
+| 2019  | 2538301000         | 38154217651400  |
+| 2020  | 2023520000         | 3041633852800   |
+| 2021  | 1947691000         | 29276522497400  |
+
+### Analisis masalah
+
+Hasil regresinya adalah
+
+```{r}
+library(readxl)
+dat<-read_excel("regresii data.xlsx")
+```
+```{r}
+reg<-lm(Y~X,data=dat)
+summary(reg)
+```
+
+berdasarkan output di atas, model regresinya bisa dilihat dari bagian estimate, yaitu y = 2.487e+09 + 8.565e-07. dari uji parsial dengan t-value sebesar 0.685 dan p-value\< 2.2e-16 dimana tingkat signifikansi yang digunakan adalah 0.513, memberikan hasil tolak H0: β1=0 artinya variabel X (Nilai tukar uang Amerika Serikat) secara signifikan berpengaruh terhadap model. Nilai koefisien regresi dari X sebesar 1.225e+01 dapat kita interpretasikan bahwa setiap kenaikan nilai tukar uang X (nilai tukar uang Amerika Serikat), maka nilai Y (nilai tukar uang indonesia) akan naik sebesar 8.565e-07
+
+## Kesimpulan
+
+Menyadari besarnya potensi yang dimiliki, maka Pemerintah Indonesia mengambil langkah untuk menerapkan kebijakan peningkatan daya saing produk kopi Indonesia di pasar global dan kesimpulan dari penelitian mengenai volume ekspor kopi Indonesia ke Amerika Serikat adalah Variabel Kurs Rupiah mempunyai hubungan positif dan berpengaruh tidak signifikan terhadap volume ekspor kopi Indonesia pasar internasional.
+
+## Referensi
+
+Nurfitri, Ade Rachmawati, dkk. 2019. ANALISIS KUALITATIF TERHADAP PERKEMBANGAN NILAI EKSPOR INDONESIA (FOB) PERIODE SEPTEMBER 2017-SEPTEMBER 2019. JURNAL VOL.13 NO.11
+
+Putranto, Hendri, Suwali. 2022. Analisis Faktor-Faktor Yang Mempengaruhi Ekspor Kopike Amerika Serikat. PJEB: PERWIRA JOURNAL OF ECONOMY & BUSINESSE-ISSN: 2775-572XVolume 02 No 02
+
+Hidayah, Nurul Eka. 2017. Analisis Ekspor Kopi Indonesia ke Amerika Serikat dengan Error Correction Model (ECM) Tahun 1990-2014.
